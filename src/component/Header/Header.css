@@ -1,0 +1,38 @@
+.header {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.header > img {
+  height: 50%;
+  margin-left: 20px;
+}
+.header a {
+  text-decoration: none;
+  color: black;
+  margin-left: 20px;
+  font-weight: 900;
+  font-size: 20px;
+}
+.menu {
+  margin-left: 20%;
+}
+.header_icon {
+  display: inline-flex;
+  justify-content: space-evenly;
+
+  margin-left: 20%;
+}
+.icon {
+  margin-left: 20px;
+  height: 26px;
+}
+
+.header a:hover {
+  color: rgb(209, 145, 7);
+  text-decoration: underline;
+}
+.icon:hover {
+  color: rgb(209, 145, 7);
+}
