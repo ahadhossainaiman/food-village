@@ -2,3 +2,15 @@
   position: sticky;
   top: 0;
 }
+.choose_cart {
+  background: #ffe0b3;
+  border: 1px solid #95a0a7;
+  border-radius: 0px 0px 8px 8px;
+  width: 100%;
+  padding: 10px 20px;
+  margin-top: 10%;
+}
+.choose_cart:hover {
+  background-color: orangered;
+  color: #ffff;
+}

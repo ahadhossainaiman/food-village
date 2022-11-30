@@ -24,3 +24,11 @@
   position: sticky;
   top: 5%;
 }
+.choose_food {
+  position: fixed;
+  margin-top: 3%;
+}
+.choose_name {
+  margin-top: 5%;
+  position: fixed;
+}

@@ -6,6 +6,7 @@ import './shop.css';
 export default function Shop() {
     const [products, setProduct] = useState({});
      const [cart,setCart] = useState([]);
+     const [choose,setCoose] = useState('');
 
     
     useEffect(()=>{
@@ -18,13 +19,24 @@ export default function Shop() {
 
    const addToCart =(selectProduct) =>{
     // console.log(selectProduct.strMeal);
-       
         let newCart = [];
-        newCart = [...cart,selectProduct.strMeal];
+        
+        if(cart.includes(selectProduct.strMeal)){
+          newCart = [...cart];
+        }else{
+          newCart = [...cart,selectProduct.strMeal];
+        }
+        // console.log(cart.includes(selectProduct.strMeal));
+        // newCart = [...cart,selectProduct.strMeal];
         
         setCart(newCart);
    }
+
+  //  console.log(cart[Math.floor(Math.random()*cart.length)]);
    
+    const addChooseOne = ()=>{
+        setCoose(cart[Math.floor(Math.random()*cart.length)]);
+    }
    
 
 
@@ -40,8 +52,10 @@ export default function Shop() {
         </div>
         <div className="cart_container">
         <div className="cart_content">
-          <Cart cart={cart}></Cart>
+          <Cart cart={cart} addChooseOne={addChooseOne} choose={choose} ></Cart>
         </div>
+        <h3 className='choose_food'>Your Choosen Food:</h3>   
+        <h4 className='choose_name'>{choose}</h4>
       </div>
 
     </div>
